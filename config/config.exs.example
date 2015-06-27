@@ -1,0 +1,9 @@
+# This file is responsible for configuring your application
+# and its dependencies with the aid of the Mix.Config module.
+use Mix.Config
+
+config :telegram_bot,
+  bot_token: "123456:TOKEN",
+  sticker_id: "BQADBAADMQADyIsGAAERAAFE5KQulX0C"
+config :logger, :console,
+  format: "\n$date $time [$level] $metadata$message"

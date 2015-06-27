@@ -1,0 +1,9 @@
+%{"hackney": {:hex, :hackney, "1.1.0"},
+  "httpoison": {:hex, :httpoison, "0.7.0"},
+  "httpotion": {:hex, :httpotion, "2.1.0"},
+  "ibrowse": {:git, "https://github.com/cmullaparthi/ibrowse.git", "d2e369ff42666c3574b8b7ec26f69027895c4d94", [tag: "v4.1.1"]},
+  "idna": {:hex, :idna, "1.0.2"},
+  "meck": {:hex, :meck, "0.8.2"},
+  "mock": {:hex, :mock, "0.1.1"},
+  "poison": {:hex, :poison, "1.4.0"},
+  "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"}}
