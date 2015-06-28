@@ -1,9 +1,9 @@
 defmodule TelegramBot.PollUpdatesTask do
   def poll(registry, updates \\ nil) do
     new_updates = if updates do
-                    TelegramBot.API.getUpdates(updates.last_update_id + 1)
+                    TelegramBot.API.get_updates(updates.last_update_id + 1)
                   else
-                    TelegramBot.API.getUpdates()
+                    TelegramBot.API.get_updates
                   end
 
     if new_updates do

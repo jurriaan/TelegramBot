@@ -9,7 +9,7 @@ defmodule TelegramBot.API do
 
   defp token, do: Application.get_env(:telegram_bot, :bot_token)
 
-  def getUpdates(offset \\ nil, limit \\ 100, timeout \\ 30) do
+  def get_updates(offset \\ nil, limit \\ 100, timeout \\ 30) do
     {:ok, response} = post("getUpdates", {:form, [offset: offset, limit: limit, timeout: timeout]}, @post_headers)
     %{"ok" => true, "result" => result} = response.body
     TelegramBot.Models.Updates.new(result)
