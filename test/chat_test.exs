@@ -25,7 +25,7 @@ defmodule ChatTest do
 
   test "it responds to a /hello message", %{chat: chat} do
     update = %Models.Update{message: %Models.Message{chat: %Models.GroupChat{id: 10, title: "Title"}, text: "/hello", from: %Models.User{first_name: "Test"}}}
-    expect(API, :sendMessage, fn (10, "Greetings, Test") -> %{} end)
+    expect(API, :send_message, fn (10, "Greetings, Test") -> %{} end)
     GenServer.cast(chat, {:update, update})
     assert validate(API)
     assert Chat.get_state(chat) == %Chat.State{chat: %Models.GroupChat{id: 10, title: "Title"}}

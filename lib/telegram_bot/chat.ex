@@ -37,10 +37,10 @@ defmodule TelegramBot.Chat do
   end
 
   def handle_message(%Message{text: "/momo"}, %State{chat: chat}) do
-    API.sendSticker(chat.id, sticker)
+    API.send_sticker(chat.id, sticker)
   end
   def handle_message(%Message{text: "/hello", from: user}, %State{chat: chat}) do
-    API.sendMessage(chat.id, "Greetings, #{user.first_name}")
+    API.send_message(chat.id, "Greetings, #{user.first_name}")
   end
   def handle_message(_,_), do: true
 

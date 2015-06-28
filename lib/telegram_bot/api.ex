@@ -15,11 +15,11 @@ defmodule TelegramBot.API do
     TelegramBot.Models.Updates.new(result)
   end
 
-  def sendMessage(chat_id, text) do
+  def send_message(chat_id, text) do
     post("sendMessage", {:form, [chat_id: chat_id, text: text]}, @post_headers)
   end
 
-  def sendSticker(chat_id, sticker) do
+  def send_sticker(chat_id, sticker) do
     post("sendSticker", {:form, [chat_id: chat_id, sticker: sticker]}, @post_headers)
   end
 
